@@ -1,0 +1,31 @@
+{
+  "common": {
+    "language": "Langue",
+    "contact": "Contact",
+    "download_cv": "Télécharger CV"
+  },
+  "home": {
+    "title": "Ahmed Ammouri - Développeur Logiciel Freelance",
+    "services": {
+      "backend": "Développement Logiciel",
+      "consulting": "Consultation Technique"
+    }
+  },
+  "about": {
+    "title": "À Propos",
+    "experience": "Années d'Expérience",
+    "education": "Formation"
+  },
+  "contact": {
+    "form": {
+      "name": "Votre Nom",
+      "email": "Adresse Email"
+    }
+  },
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "current_language": "Langue actuelle"
+  }
+}

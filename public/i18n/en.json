@@ -1,0 +1,31 @@
+{
+  "common": {
+    "language": "Language",
+    "contact": "Contact",
+    "download_cv": "Download CV"
+  },
+  "home": {
+    "title": "Ahmed Ammouri - Freelance Software Developer",
+    "services": {
+      "backend": "Software Development",
+      "consulting": "Technical Consulting"
+    }
+  },
+  "about": {
+    "title": "About",
+    "experience": "Years of Experience",
+    "education": "Education"
+  },
+  "contact": {
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address"
+    }
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "current_language": "Current Language"
+  }
+}
