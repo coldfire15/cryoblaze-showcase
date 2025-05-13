@@ -42,14 +42,14 @@
 }
 
 .logo-icon {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   color: var(--color-primary);
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-slow);
 }
 
 .logo:hover .logo-icon {
-  transform: rotate(-15deg);
+  transform: scale3d(1.2, 1.2, 1.2);
 }
 
 .logo-text {
