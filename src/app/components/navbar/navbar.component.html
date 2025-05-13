@@ -1,32 +1,78 @@
 <nav class="navbar">
   <div class="nav-container">
-    <div class="nav-brand">
-      <a routerLink="/" class="logo">
-      </a>
-      <div class="nav-content">
+    <a [routerLink]="['/']" class="logo">
+      <!-- SVG + CryoBlaze text -->
+    </a>
 
-        @for (item of navItems; track item.link) {
-          <ul class="nav-list">
-            <li class="nav-item" [class.active]="item.active">
-              <a [routerLink]="item.link"  routerLinkActive="active">
+    <button
+      class="mobile-menu-btn"
+      [class.menu-open]="mobileOpen()"
+      (click)="toggleMobile()"
+      aria-label="Toggle navigation"
+    >
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
 
-                {{ item.label | translate}}
-
-              </a>
-            </li>
-          </ul>
+    <div class="nav-content">
+      <ul class="nav-list">
+        @for( item of navItems; track item.link) {
+          <li class="nav-item">
+            <a
+              [routerLink]="item.link"
+              routerLinkActive="active"
+              class="nav-link"
+            >
+              {{ item.label | translate }}
+              <span class="active-indicator"></span>
+            </a>
+          </li>
         }
+      </ul>
+      <div
+        class="language-switcher"
+        role="button"
+        aria-haspopup="listbox"
+        [attr.aria-expanded]="langMenuOpen()"
+        tabindex="0"
+        (click)="toggleLang()"
+        (keydown.enter)="toggleLang()"
+      >
+        <div class="lang-display">
+          <span class="flag">{{ currentLangInfo().flag }}</span>
+          <span class="lang-label">{{ currentLangInfo().name }}</span>
+          <svg class="chevron" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </div>
       </div>
-    </div>
 
-    <div class="language-switcher">
-      @for (lang of languageService.supportedLanguages; track lang) {
-        <button (click)="languageService.setLanguage(lang)">
-          {{ languageService.getLanguageInfo(lang).flag }}
-          {{ languageService.getLanguageInfo(lang).name }}
-        </button>
+      @if(langMenuOpen()) {
+        <ul class="language-menu" role="listbox">
+          @for(lang of supportedLangsInfo(); track lang.name) {
+            <li
+              class="language-item"
+              role="option"
+              [attr.aria-selected]="currentLang() === lang.name"
+              tabindex="0"
+              (click)="selectLanguage(lang.name)"
+              (keydown.enter)="selectLanguage(lang.name)"
+            >
+              <span class="flag">{{ lang.flag }}</span>
+              <span class="lang-label">{{ lang.name }}</span>
+              @if (currentLang() == lang.name){
+                <svg class="checkmark" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M6 10l3 3 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              }
 
+            </li>
+          }
+        </ul>
       }
+
+
     </div>
   </div>
 </nav>

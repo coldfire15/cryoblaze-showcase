@@ -1,13 +1,16 @@
 import {computed, Injectable, signal} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 
-
+export interface LanguageInfo {
+  name: string;
+  flag:string;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class LanguageService {
-  private readonly currentLanguage = signal<string>('fr');
+  public currentLanguage = signal<string>('fr');
   readonly supportedLanguages = ['en','fr'];
   constructor(private translate: TranslateService) {
     this.initializeLanguage();
@@ -16,15 +19,18 @@ export class LanguageService {
   private initializeLanguage() {
     const savedLang = localStorage.getItem('lang');
     const browserLang = this.translate.getBrowserLang();
-    let initialLang = ''
-    if (browserLang != null) {
-      initialLang = savedLang || (this.supportedLanguages.includes(browserLang) ? browserLang : 'fr');
-    }
-    this.setLanguage(initialLang)
+    const initialLang =
+      savedLang && this.supportedLanguages.includes(savedLang)
+        ? savedLang
+        : this.supportedLanguages.includes(<string>browserLang)
+          ? browserLang
+          : 'fr';
+
+    this.setLanguage(typeof initialLang === "string" ? initialLang :'fr');
   }
 
   getCurrentLanguage() {
-    return this.currentLanguage.asReadonly();
+    return this.currentLanguage();
   }
 
   setLanguage(lang: string) {
@@ -35,11 +41,12 @@ export class LanguageService {
     }
   }
 
-  getLanguageInfo(lang:string){
-    return {
-      'en':{name:'English', flag:'🇺🇸'},
-      'fr':{name:'France', flag:'🇫🇷'},
-    }[lang] || {name:lang.toUpperCase(),flag: ''};
+  private languageMap: Record<string, LanguageInfo> = {
+    en: { name: 'English', flag: '🇺🇸' },
+    fr: { name: 'French', flag: '🇫🇷' },
+  };
+  getLanguageInfo(lang:string): LanguageInfo{
+    return this.languageMap[lang] || {name:lang.toUpperCase(),flag: ''};
   }
 
 }
