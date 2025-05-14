@@ -77,6 +77,7 @@ export class NavbarComponent {
   }
 
   // select language and close menus
+
   selectLanguage(lang: string) {
     if (lang === this.currentLang()) return;
     let langSymbol = lang === 'English' ? 'en' : 'fr';

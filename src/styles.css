@@ -4,50 +4,38 @@
   /* Dark Theme - Harmonious Palette */
 
   /* Primary colors */
-  --color-primary: #64B5F6;       /* Slightly lighter, still confident on dark */
-  --color-primary-rgb: 100, 181, 246;
-  --color-primary-hover: #42A5F5;  /* Slightly darker hover */
-  --color-primary-light: #90CAF9;  /* Lighter shade for subtle accents */
-  --color-primary-muted: #424242;  /* Darker muted tone for backgrounds */
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-primary-light: #818cf8;
+  --color-primary-muted: #3730a3;
 
-  /* Secondary colors */
-  --color-secondary: #FFA726;     /* Warmer orange for better contrast on dark */
-  --color-secondary-hover: #FB8C00;
-  --color-secondary-light: #FFD54F;
+  --color-secondary: #06b6d4;
+  --color-secondary-hover: #0891b2;
+  --color-secondary-light: #22d3ee;
 
-  /* Accent colors */
-  --color-accent: #26A69A;        /* Teal that pops on dark backgrounds */
-  --color-accent-light: #80CBC4;
+  --color-accent: #8b5cf6;
+  --color-accent-light: #a78bfa;
+  --color-accent-dark: #7c3aed;
 
-  /* Neutrals - Dark theme */
-  --color-background: #121212;     /* Dark charcoal background */
-  --primary-dark: #1E1E1E;         /* Slightly lighter dark for cards */
-  --color-card-background-rgb: 30, 30, 30;
-  --color-border: #424242;        /* Darker gray border */
-  --color-border-light: #616161;
-  --color-divider: #757575;
+  /* Background Colors */
+  --color-background: #0f172a;
+  --color-background-dark: #030712;
+  --color-card-background: #1e293b;
+  --color-card-background-hover: #273549;
+  --color-card-background-rgb: 30, 41, 59;
 
-  /* Text colors */
-  --color-text-primary: #ECEFF1;   /* Light gray for primary text on dark */
-  --color-text-secondary: #CFD8DC;
-  --color-text-tertiary: #B0BEC5;
-  --color-text-muted: #90A4AE;
-  --color-text-on-primary: #FFFFFF;
+  /* Border Colors */
+  --color-border: #334155;
+  --color-border-light: #475569;
+  --color-divider: #64748b;
 
-  /* Feedback colors (adjusted for dark theme) */
-  --color-success: #81C784;       /* Brighter green for visibility */
-  --color-success-hover: #66BB6A;
-  --color-warning: #FFB74D;       /* Yellow-orange for better contrast */
-  --color-warning-hover: #FFA726;
-  --color-error: #E57373;         /* Lighter red for visibility */
-  --color-error-hover: #EF5350;
-  --color-info: #64B5F6;          /* Matching primary blue */
-
-  /* Feedback backgrounds */
-  --color-success-light: rgba(139, 195, 74, 0.15); /* Slightly more opaque */
-  --color-warning-light: rgba(255, 167, 38, 0.15);
-  --color-error-light: rgba(244, 67, 54, 0.15);
-  --color-info-light: rgba(100, 181, 246, 0.15);
+  /* Text Colors */
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+  --color-text-tertiary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-text-on-primary: #ffffff;
+  --color-text-on-secondary: #ffffff;
 
   /* Shadows - Glowing effects */
   --shadow-sm: 0 1px 2px 0 rgba(0, 242, 254, 0.1);
@@ -108,6 +96,7 @@
   --z-above: 10;
   --z-modal: 100;
   --z-toast: 1000;
+  --font-heading: 'Poppins', sans-serif;
 }
 
 /* Base reset */
@@ -356,10 +345,14 @@ a:focus {
 
 .container {
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 var(--space-xl);
 }
-
+.main-content{
+  flex:1;
+  padding: var(--space-3xl) 0;
+}
 .section-title {
   margin-bottom: var(--space-2xl);
   position: relative;
