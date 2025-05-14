@@ -1,1 +1,31 @@
-<p>contact works!</p>
+<section class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info animate-slide-in">
+        <h2 class="section-title" translate="contact.title"></h2>
+        <p translate="contact.description"></p>
+        <ul class="contact-details">
+          <li><a href="mailto:ammouri.ahmed92@gmail.com">ammouri.ahmed92gmail.com</a></li>
+          <li><a href="https://linkedin.com/in/@ahmed-ammouri" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">GitHub</a></li> </ul>
+      </div>
+      <div class="contact-form animate-fade-in delay-100">
+        <form>
+          <div class="form-group">
+            <label for="name" class="visually-hidden" translate="contact.form.nameLabel">Name</label>
+            <input type="text" id="name" placeholder="{{ 'contact.form.namePlaceholder' | translate }}">
+          </div>
+          <div class="form-group">
+            <label for="email" class="visually-hidden" translate="contact.form.emailLabel">Email</label>
+            <input type="email" id="email" placeholder="{{ 'contact.form.emailPlaceholder' | translate }}">
+          </div>
+          <div class="form-group">
+            <label for="message" class="visually-hidden" translate="contact.form.messageLabel">Message</label>
+            <textarea id="message" rows="5" placeholder="{{ 'contact.form.messagePlaceholder' | translate }}"></textarea>
+          </div>
+          <button type="submit" class="btn primary submit-button" translate="contact.form.submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

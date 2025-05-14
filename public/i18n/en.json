@@ -5,9 +5,53 @@
     "download_cv": "Download CV"
   },
   "home": {
-    "title": "Ahmed Ammouri - Freelance Software Developer",
+    "title": "Ahmed Ammouri - Freelance Backend Developer",
+    "hero": {
+      "headline": "Ahmed Ammouri - Professional Backend Developer",
+      "subheadline": "Software developer with 6 years of experience, specializing in the design and development of robust and scalable applications. Passionate about modern backend architectures, microservices, and cloud technologies.",
+      "ctaContact": "Let's Collaborate",
+      "ctaPortfolio": "Explore My Work",
+      "alt": "Ahmed Ammouri Professional Profile Picture"
+    },
+    "experience": {
+      "title": "Professional Experience",
+      "techUsed": "Technologies",
+      "cgm": {
+        "title": "Backend Engineer",
+        "detail1": "Design, development and maintenance of CGM Studio, a cloud platform dedicated to healthcare professionals in Italy.",
+        "detail2": "Backend development within a microservices architecture, ensuring scalability and performance of the application.",
+        "detail3": "Optimization and maintenance of services to ensure high availability and optimal performance.",
+        "detail4": "Close collaboration with product, frontend and DevOps teams to guarantee technical alignment with the needs of healthcare professionals.",
+        "detail5": "Participation in architectural choices to improve the robustness and flexibility of the application.",
+        "detail6": "Improvement of medical practice management tools: management of patient records, appointment scheduling, and automation of administrative tasks."
+      },
+      "socgen": {
+        "title": "Full Stack Engineer",
+        "detail1": "Development and maintenance of Risk Metric Management, an application for managing users, access rights and workflows related to risk management.",
+        "detail2": "Design and implementation of the software architecture using a full-stack approach.",
+        "detail3": "Collaboration with business and technical teams to align the application with risk management needs.",
+        "detail4": "Performance optimization and redesign of key features to improve the user experience and system reliability."
+      },
+      "capgemini": {
+        "title": "Software Engineer",
+        "detail1": "Development and maintenance of a functional administration platform integrated with the Dassault Systèmes PLM 3DExperience solution.",
+        "detail2": "Design and implementation of a robust architecture enabling efficient management of business processes related to 3DX.",
+        "detail3": "Integration and adaptation of the platform to the specific needs of 3DX to ensure a smooth and efficient experience.",
+        "detail4": "Collaboration with business and technical teams to ensure alignment of functionalities with EDF requirements.",
+        "detail5": "Continuous improvement of the platform by optimizing performance and ensuring long-term scalability."
+      }
+    },
+    "skills": {
+      "title": "Technical Skills",
+      "category": {
+        "languages": "Languages & Frameworks",
+        "tools": "Tools",
+        "agile": "Agile Methodologies",
+        "other": "Other"
+      }
+    },
     "services": {
-      "backend": "Software Development",
+      "backend": "Backend Development",
       "consulting": "Technical Consulting"
     }
   },
@@ -17,9 +61,16 @@
     "education": "Education"
   },
   "contact": {
+    "title": "Got a project? Let's talk.",
+    "description": "I’m always open to discussing new projects and collaborations. Feel free to reach out!",
     "form": {
-      "name": "Your Name",
-      "email": "Email Address"
+      "nameLabel": "Name",
+      "namePlaceholder": "Your Name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Your Email",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Your Message",
+      "submit": "Send Message"
     }
   },
   "navbar": {

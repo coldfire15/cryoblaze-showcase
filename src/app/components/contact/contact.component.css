@@ -1,0 +1,103 @@
+.contact {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-background);
+}
+
+.contact .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.contact .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .contact .contact-grid {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+  }
+
+  .contact .contact-info {
+    margin-bottom: var(--space-lg);
+    text-align: center;
+  }
+}
+
+.contact .section-title {
+  margin-bottom: var(--space-md);
+}
+
+.contact .contact-info p {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-lg);
+}
+
+.contact .contact-info ul.contact-details {
+  list-style: none;
+  padding: 0;
+}
+
+.contact .contact-info ul.contact-details li {
+  margin-bottom: var(--space-sm);
+}
+
+.contact .contact-info ul.contact-details li a {
+  color: var(--color-text-primary);
+  transition: color var(--transition-fast);
+}
+
+.contact .contact-info ul.contact-details li a:hover {
+  color: var(--color-primary);
+}
+
+.contact .contact-form {
+  background-color: var(--primary-dark);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact .contact-form .form-group {
+  margin-bottom: var(--space-md);
+}
+
+.contact .contact-form label {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-xs);
+}
+
+.contact .contact-form input[type="text"],
+.contact .contact-form input[type="email"],
+.contact .contact-form textarea {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  transition: border-color var(--transition-fast);
+}
+
+.contact .contact-form input[type="text"]:focus,
+.contact .contact-form input[type="email"]:focus,
+.contact .contact-form textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.contact .contact-form textarea {
+  min-height: 100px;
+}
+
+.contact .contact-form .submit-button {
+  width: 100%;
+}

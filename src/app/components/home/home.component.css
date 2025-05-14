@@ -1,0 +1,256 @@
+/* Home Component Styles */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: var(--space-3xl) 0;
+  background-color: var(--primary-dark);
+  color: var(--color-text-primary);
+}
+
+.hero-content {
+  max-width: 500px;
+  padding: 0 var(--space-lg);
+}
+
+.hero-headline {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+}
+
+.hero-subheadline {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Experience Section */
+
+.experience {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-background);
+}
+
+.experience .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.experience .section-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-2xl);
+  text-align: center;
+}
+
+.experience-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.experience-item {
+  background-color: var(--primary-dark);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.experience-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.experience-title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.experience-company {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.experience-duration {
+  font-size: var(--font-size-md);
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-md);
+}
+
+.experience-details {
+  list-style: disc;
+  margin-left: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.experience-details li {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-sm);
+}
+
+.experience-tech {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}
+
+/* Skills Section */
+
+.skills {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-background);
+}
+
+.skills .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.skills .section-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-2xl);
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+}
+
+.skill-category {
+  background-color: var(--primary-dark);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.skill-category h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-md);
+}
+
+.skill-category p {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+}
+
+/* Basic styling for inline SVGs */
+svg {
+  display: inline-block; /* Allows them to sit alongside text */
+  vertical-align: middle; /* Adjusts vertical alignment with surrounding text */
+  /* You might want to set a default size */
+  width: 1em; /* Adjust as needed */
+  height: 1em; /* Adjust as needed */
+  fill: currentColor; /* Makes the SVG inherit the text color by default */
+}
+
+/* If you want to control the size through a class */
+.icon-small {
+  width: 0.8em;
+  height: 0.8em;
+}
+
+.icon-medium {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.icon-large {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+/* To change the fill color specifically */
+.icon-primary {
+  fill: blue;
+}
+
+.icon-secondary {
+  fill: gray;
+}
+
+.icon-accent {
+  fill: purple;
+}
+
+svg path {
+  stroke: none; /* Remove default stroke */
+}
+
+svg line,
+svg rect,
+svg circle {
+  stroke: black;
+  fill: none;
+  stroke-width: 1px;
+}
+
+svg:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+
+button svg {
+  margin-right: 0.25em;
+}
+
+
+.button-with-icon {
+  padding-left: 1.5em;
+  background-repeat: no-repeat;
+  background-position: left 0.2em center;
+  background-size: 1em;
+
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-image-container {
+    order: 1;
+  }
+
+  .experience-list {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

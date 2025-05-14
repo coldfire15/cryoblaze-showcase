@@ -23,6 +23,17 @@ interface NavItem {
 })
 export class NavbarComponent {
   private languageService = inject(LanguageService);
+  hero =
+    {
+      fullName: 'Ahmed AMMOURI',
+      positionTitle: 'CEO & Founder',
+      bio: 'Sofware engineer and founder of MarginMaster',
+      img: 'images/ahmed-ammouri.jpeg',
+      github: 'https://github.com/coldfire15',
+      linkedin: 'https://github.com/coldfire15',
+      twitter: 'https://github.com/coldfire15',
+      facebook: 'https://github.com/coldfire15'
+    };
 
   // static nav items
   readonly navItems: NavItem[] = [

@@ -5,9 +5,53 @@
     "download_cv": "Télécharger CV"
   },
   "home": {
-    "title": "Ahmed Ammouri - Développeur Logiciel Freelance",
+    "title": "Ahmed Ammouri - Développeur Backend Freelance",
+    "hero": {
+      "headline": "Ahmed Ammouri - Développeur Backend Professionnel",
+      "subheadline": "Développeur logiciel avec 6 ans d'expérience, spécialisé dans la conception et le développement d'applications robustes et évolutives. Passionné par les architectures backend modernes, les microservices et les technologies cloud.",
+      "ctaContact": "Collaborons",
+      "ctaPortfolio": "Explorer mon travail",
+      "alt": "Photo de profil professionnel d'Ahmed Ammouri"
+    },
+    "experience": {
+      "title": "Expérience Professionnelle",
+      "techUsed": "Technologies",
+      "cgm": {
+        "title": "Ingénieur Backend",
+        "detail1": "Conception, développement et maintenance de CGM Studio, une plateforme cloud dédiée aux professionnels de santé en Italie.",
+        "detail2": "Développement backend au sein d'une architecture microservices, garantissant scalabilité et performance de l'application.",
+        "detail3": "Optimisation et maintenance des services pour assurer une haute disponibilité et des performances optimales.",
+        "detail4": "Collaboration étroite avec les équipes produit, frontend et DevOps pour garantir l'alignement technique avec les besoins des professionnels de santé.",
+        "detail5": "Participation aux choix d'architecture pour améliorer la robustesse et la flexibilité de l'application.",
+        "detail6": "Amélioration des outils de gestion de cabinet médical: gestion des dossiers patients, planification des rendez-vous, et automatisation des tâches administratives."
+      },
+      "socgen": {
+        "title": "Ingénieur Full Stack",
+        "detail1": "Développement et maintenance de Risk Metric Management, une application permettant de gérer les utilisateurs, les droits d'accès et les workflows liés à la gestion des risques.",
+        "detail2": "Conception et mise en place de l'architecture logicielle en utilisant une approche full-stack.",
+        "detail3": "Collaboration avec les équipes métiers et techniques pour aligner l'application avec les besoins de la gestion des risques.",
+        "detail4": "Optimisation des performances et refonte de fonctionnalités clés pour améliorer l'expérience utilisateur et la fiabilité du système."
+      },
+      "capgemini": {
+        "title": "Ingénieur Logiciel",
+        "detail1": "Développement et maintenance d'une plateforme d'administration fonctionnelle intégrée à la solution Dassault Systèmes PLM 3DExperience.",
+        "detail2": "Conception et mise en place d'une architecture robuste permettant une gestion efficace des processus métiers liés à 3DX.",
+        "detail3": "Intégration et adaptation de la plateforme aux besoins spécifiques de 3DX pour assurer une expérience fluide et efficace.",
+        "detail4": "Collaboration avec les équipes métiers et techniques pour assurer l'alignement des fonctionnalités avec les exigences d'EDF.",
+        "detail5": "Amélioration continue de la plateforme en optimisant les performances et en assurant l'évolutivité à long terme."
+      }
+    },
+    "skills": {
+      "title": "Compétences Techniques",
+      "category": {
+        "languages": "Langages & Frameworks",
+        "tools": "Outils",
+        "agile": "Méthodologies Agiles",
+        "other": "Autres"
+      }
+    },
     "services": {
-      "backend": "Développement Logiciel",
+      "backend": "Développement Backend",
       "consulting": "Consultation Technique"
     }
   },
@@ -17,9 +61,16 @@
     "education": "Formation"
   },
   "contact": {
+    "title": "Un projet en tête ? Discutons-en.",
+    "description": "Je suis toujours ouvert à de nouveaux projets et collaborations. N'hésitez pas à me contacter !",
     "form": {
-      "name": "Votre Nom",
-      "email": "Adresse Email"
+      "nameLabel": "Nom",
+      "namePlaceholder": "Votre Nom",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Votre Email",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Votre Message",
+      "submit": "Envoyer le Message"
     }
   },
   "navbar": {

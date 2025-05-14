@@ -1,53 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Brand colors - CryoBlaze palette */
-  --color-primary: #00F2FE;
-  --color-primary-rgb: 0, 242, 254;
-  --color-primary-hover: #00D9E9;
-  --color-primary-light: rgba(0, 242, 254, 0.15);
-  --color-primary-muted: rgba(0, 242, 254, 0.4);
+  /* Dark Theme - Harmonious Palette */
+
+  /* Primary colors */
+  --color-primary: #64B5F6;       /* Slightly lighter, still confident on dark */
+  --color-primary-rgb: 100, 181, 246;
+  --color-primary-hover: #42A5F5;  /* Slightly darker hover */
+  --color-primary-light: #90CAF9;  /* Lighter shade for subtle accents */
+  --color-primary-muted: #424242;  /* Darker muted tone for backgrounds */
 
   /* Secondary colors */
-  --color-secondary: #FF6B35;
-  --color-secondary-hover: #FF511A;
-  --color-secondary-light: rgba(255, 107, 53, 0.15);
+  --color-secondary: #FFA726;     /* Warmer orange for better contrast on dark */
+  --color-secondary-hover: #FB8C00;
+  --color-secondary-light: #FFD54F;
 
   /* Accent colors */
-  --color-accent: #FF6B35;
-  --color-accent-light: rgba(255, 107, 53, 0.15);
+  --color-accent: #26A69A;        /* Teal that pops on dark backgrounds */
+  --color-accent-light: #80CBC4;
 
   /* Neutrals - Dark theme */
-  --color-background: #0A0A0A;
-  --color-card-background: #1A1A1A;
-  --color-card-background-rgb: 26, 26, 26;
-  --color-border: #2D2D2D;
-  --color-border-light: rgba(255, 255, 255, 0.05);
-  --color-border-focus: #3D3D3D;
-  --color-divider: #333333;
+  --color-background: #121212;     /* Dark charcoal background */
+  --primary-dark: #1E1E1E;         /* Slightly lighter dark for cards */
+  --color-card-background-rgb: 30, 30, 30;
+  --color-border: #424242;        /* Darker gray border */
+  --color-border-light: #616161;
+  --color-divider: #757575;
 
   /* Text colors */
-  --color-text-primary: #F5F5F5;
-  --color-text-secondary: #CCCCCC;
-  --color-text-tertiary: #999999;
-  --color-text-muted: #666666;
-  --color-text-on-primary: #0A0A0A;
+  --color-text-primary: #ECEFF1;   /* Light gray for primary text on dark */
+  --color-text-secondary: #CFD8DC;
+  --color-text-tertiary: #B0BEC5;
+  --color-text-muted: #90A4AE;
+  --color-text-on-primary: #FFFFFF;
 
-  /* Feedback colors */
-  --color-success: #00E676;
-  --color-success-hover: #00C764;
-  --color-warning: #FFC107;
-  --color-warning-hover: #FFAB00;
-  --color-error: #FF3B30;
-  --color-error-hover: #FF261A;
-  --color-info: #00B0FF;
-  --color-info-hover: #0091EA;
+  /* Feedback colors (adjusted for dark theme) */
+  --color-success: #81C784;       /* Brighter green for visibility */
+  --color-success-hover: #66BB6A;
+  --color-warning: #FFB74D;       /* Yellow-orange for better contrast */
+  --color-warning-hover: #FFA726;
+  --color-error: #E57373;         /* Lighter red for visibility */
+  --color-error-hover: #EF5350;
+  --color-info: #64B5F6;          /* Matching primary blue */
 
   /* Feedback backgrounds */
-  --color-success-light: rgba(0, 230, 118, 0.12);
-  --color-warning-light: rgba(255, 193, 7, 0.12);
-  --color-error-light: rgba(255, 59, 48, 0.12);
-  --color-info-light: rgba(0, 176, 255, 0.12);
+  --color-success-light: rgba(139, 195, 74, 0.15); /* Slightly more opaque */
+  --color-warning-light: rgba(255, 167, 38, 0.15);
+  --color-error-light: rgba(244, 67, 54, 0.15);
+  --color-info-light: rgba(100, 181, 246, 0.15);
 
   /* Shadows - Glowing effects */
   --shadow-sm: 0 1px 2px 0 rgba(0, 242, 254, 0.1);
@@ -171,6 +171,7 @@ select:focus,
 textarea:focus,
 a:focus {
   outline: none;
+  box-shadow: var(--shadow-outline);
 }
 
 .btn {
@@ -230,7 +231,7 @@ a:focus {
 }
 
 .btn.secondary {
-  background-color: var(--color-card-background);
+  background-color: var(--primary-dark);
   color: var(--color-text-secondary);
   border: 2px solid var(--color-border);
 }
@@ -353,6 +354,38 @@ a:focus {
 .w-full { width: 100%; }
 .h-full { height: 100%; }
 
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.section-title {
+  margin-bottom: var(--space-2xl);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 3px;
+  width: 40%;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+section {
+  padding: var(--space-3xl) 0;
+  position: relative;
+}
+
+.mr-sm {
+  margin-right: var(--space-sm);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -377,6 +410,14 @@ a:focus {
 
   h2 {
     font-size: var(--font-size-2xl);
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  section {
+    padding: var(--space-2xl) 0;
   }
 }
 
