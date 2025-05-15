@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import {RouterLink} from '@angular/router';
+import {Component} from '@angular/core';
 import {ContactComponent} from '../contact/contact.component';
 import {TranslateModule} from '@ngx-translate/core';
 
@@ -7,7 +6,7 @@ import {TranslateModule} from '@ngx-translate/core';
   selector: 'app-home',
   imports: [
     ContactComponent,
-    TranslateModule
+    TranslateModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -57,7 +56,7 @@ export class HomeComponent {
 
   skills = {
     agile: 'Scrum, Safe',
-    languages: 'Quarkus, Spring Boot, Java, Angular, Python, SQL, Node.js',
+    languages: 'Quarkus, Spring Boot, Java, Angular, Python, SQL, Node.js,html5,css3',
     tools: 'Eclipse, IntelliJ, Pycharm, WebStorm, Anaconda, Spyder, GitHub, GitLab, Jenkins, Kubernetes, Docker',
     other: 'LaTeX, Linux, REST API',
   };
@@ -65,7 +64,7 @@ export class HomeComponent {
   scrollToContact(): void {
     const contactElement = document.getElementById('contact');
     if (contactElement) {
-      contactElement.scrollIntoView({ behavior: 'smooth' });
+      contactElement.scrollIntoView({behavior: 'smooth'});
     }
   }
 }
