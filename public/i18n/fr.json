@@ -58,6 +58,7 @@
       "category": {
         "languages": "Langages & Frameworks",
         "tools": "Outils",
+        "databases": "Bases de données & ORM ",
         "agile": "Méthodologies Agile",
         "other": "Autres"
       }
@@ -90,5 +91,9 @@
     "about": "À propos",
     "contact": "Contact",
     "current_language": "Langue actuelle"
+  },
+  "footer": {
+    "rights": "2025, Tous les droits sont réservés ©",
+    "slogan": "Des solutions web innovantes et performantes pour un avenir numérique"
   }
 }

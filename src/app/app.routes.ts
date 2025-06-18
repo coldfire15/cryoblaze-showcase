@@ -9,7 +9,7 @@ export const routes: Routes = [
     component: HomeComponent
   },
   {
-    path:'contact-message',
+    path:'contact',
     component: ContactComponent
   },
   {

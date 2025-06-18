@@ -52,15 +52,41 @@
         "detail4": "Implementing CI/CD pipelines to streamline deployment and enhance development agility.",
         "detail5": "Leading code reviews and mentoring junior developers to foster technical growth and maintain code quality."
       }
-
     },
     "skills": {
       "title": "Technical Skills",
       "category": {
         "languages": "Languages & Frameworks",
-        "tools": "Tools",
-        "agile": "Agile Methodologies",
-        "other": "Other"
+        "databases": "Dataases & ORMs",
+        "cloud": "Cloud & DevOps",
+        "tools": "Tools & Methodologies"
+      },
+      "items": {
+        "java": "Java",
+        "springBoot": "Spring Boot",
+        "python": "Python",
+        "cPlusPlus": "C++",
+        "nodeJs": "Node.js",
+        "angular": "Angular",
+        "hibernate": "Hibernate",
+        "jpa": "JPA",
+        "sql": "SQL",
+        "postgresql": "PostgreSQL",
+        "mongodb": "MongoDB",
+        "docker": "Docker",
+        "kubernetes": "Kubernetes",
+        "aws": "AWS",
+        "azure": "Azure",
+        "git": "Git",
+        "jenkins": "Jenkins",
+        "maven": "Maven",
+        "gradle": "Gradle",
+        "jira": "Jira",
+        "scrum": "Scrum",
+        "kanban": "Kanban",
+        "microservices": "Microservices",
+        "restfulApis": "RESTful APIs",
+        "graphql": "GraphQL"
       }
     },
     "services": {
@@ -91,5 +117,9 @@
     "about": "About",
     "contact": "Contact",
     "current_language": "Current Language"
+  },
+  "footer": {
+    "rights": "2025, All rights reserved©",
+    "slogan": "Innovative and high-performing web solutions for a digital future."
   }
 }
