@@ -1,1 +1,65 @@
-<p>not-found works!</p>
+<div class="not-found-container">
+  <div class="error-card">
+    <div class="error-header">
+      <div class="error-code">
+        <span class="bracket">[</span>
+        <span class="number">404</span>
+        <span class="bracket">]</span>
+      </div>
+      <h1 translate="notFoundTitle"></h1>
+      <p class="subtitle" translate="notFoundSubtitle"></p>
+    </div>
+
+    <div class="error-content">
+      <div class="interactive-area">
+        <div class="particle-container">
+          @for (particle of particles; track particle) {
+            <div class="particle"
+                 [style.left.px]="particle.x"
+                 [style.top.px]="particle.y"
+                 [style.width.px]="particle.size"
+                 [style.height.px]="particle.size"
+                 [style.background]="particle.color"
+                 [style.animation]="'float ' + (1 + Math.random() * 3) + 's infinite alternate'">
+            </div>
+          }
+        </div>
+
+        <div class="debug-console">
+          <div class="console-header">
+            <div class="console-button red"></div>
+            <div class="console-button yellow"></div>
+            <div class="console-button green"></div>
+            <span class="console-title">DEBUG CONSOLE</span>
+          </div>
+          <div class="console-body">
+            <p>&gt; ERROR 404: Resource not found</p>
+            <p>&gt; Scanning quantum pathways...</p>
+            <p>&gt; Found potential solutions:</p>
+            <p class="solution" (click)="navigateHome()"><span class="command">$</span> return-to-homepage</p>
+            <p class="solution" (click)="navigateProjects()"><span class="command">$</span> explore-projects</p>
+            <p class="solution" (click)="playConfetti()"><span class="command">$</span> panic-mode --confetti</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="message" translate="notFoundMessage">
+
+      </p>
+    </div>
+
+    <div class="action-buttons">
+      <button class="btn primary" (click)="navigateHome()" translate="notFoundHomeButton">
+<!--        <i class="fas fa-home"></i> Return to Reality-->
+      </button>
+      <button class="btn secondary" (click)="navigateProjects()" translate="notFoundProjectsButton">
+<!--        <i class="fas fa-code"></i> View Projects-->
+      </button>
+    </div>
+  </div>
+
+  <div class="cryoblaze-brand">
+    <img src="https://api.dicebear.com/7.x/shapes/svg?seed=CryoBlaze&backgroundType=gradientLinear&backgroundRotation=45&size=40" alt="CryoBlaze">
+    <span>CryoBlaze Engineering</span>
+  </div>
+</div>

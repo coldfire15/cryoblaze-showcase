@@ -121,5 +121,10 @@
   "footer": {
     "rights": "2025, All rights reserved©",
     "slogan": "Innovative and high-performing web solutions for a digital future."
-  }
+  },
+  "notFoundTitle": "Quantum Flux Detected",
+  "notFoundSubtitle": "The page you're seeking has entered a superposition state",
+  "notFoundMessage": "While we collapse the wavefunction, perhaps you'd like to explore my observable projects?",
+  "notFoundHomeButton": "Return to Reality",
+  "notFoundProjectsButton": "View Projects"
 }

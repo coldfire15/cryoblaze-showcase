@@ -95,5 +95,10 @@
   "footer": {
     "rights": "2025, Tous les droits sont réservés ©",
     "slogan": "Des solutions web innovantes et performantes pour un avenir numérique"
-  }
+  },
+  "notFoundTitle": "Fluctuation Quantique Détectée",
+  "notFoundSubtitle": "La page que vous cherchez est en superposition quantique",
+  "notFoundMessage": "Pendant que nous réduisons la fonction d'onde, peut-être souhaitez-vous explorer mes projets observables ?",
+  "notFoundHomeButton": "Retour à la Réalité",
+  "notFoundProjectsButton": "Voir les Projets"
 }
