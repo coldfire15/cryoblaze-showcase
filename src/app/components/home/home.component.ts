@@ -14,9 +14,22 @@ import {TranslateModule} from '@ngx-translate/core';
 export class HomeComponent {
   experiences = [
     {
+      title: 'home.experience.mappa.title',
+      company: 'Mappa Assurances',
+      duration: 'home.experience.mappa.duration',
+      details: [
+        'home.experience.mappa.detail1',
+        'home.experience.mappa.detail2',
+        'home.experience.mappa.detail3',
+        'home.experience.mappa.detail4',
+        'home.experience.mappa.detail5',
+      ],
+      tech: 'Java, PostgreSQL, Spring boot, Kubernetes, Git',
+    },
+    {
       title: 'home.experience.cgm.title',
       company: 'CompuGroupMedical Paris',
-      duration: 'Since April 2024',
+      duration: 'home.experience.cgm.duration',
       details: [
         'home.experience.cgm.detail1',
         'home.experience.cgm.detail2',
@@ -30,7 +43,7 @@ export class HomeComponent {
     {
       title: 'home.experience.socgen.title',
       company: 'Société Générale La Défense',
-      duration: 'July 2021 to April 2024',
+      duration: 'home.experience.socgen.duration',
       details: [
         'home.experience.socgen.detail1',
         'home.experience.socgen.detail2',
@@ -42,7 +55,7 @@ export class HomeComponent {
     {
       title: 'home.experience.capgemini.title',
       company: 'CAPGEMINI TECHNOLOGY SERVICES - EDF Suresnes',
-      duration: 'October 2018 – July 2021',
+      duration: 'home.experience.capgemini.duration',
       details: [
         'home.experience.capgemini.detail1',
         'home.experience.capgemini.detail2',
@@ -51,7 +64,8 @@ export class HomeComponent {
         'home.experience.detail5',
       ],
       tech: 'Spring Boot, Angular, Confluence, Jira',
-    },
+    }
+
   ];
 
   skills = {

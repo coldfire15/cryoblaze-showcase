@@ -432,21 +432,4 @@
 }
 
 /* Dark/Light Theme Variables */
-:host {
-  --color-background-header: rgba(15, 23, 42, 0.95);
-  --color-bg-hover: rgba(79, 70, 229, 0.08);
-  --color-bg-social: rgba(245, 243, 255, 0.1);
-  --color-icon-social: var(--color-primary);
-  --color-background-elevated: #1e293b;
-  --shadow-social: 0 8px 20px rgba(79, 70, 229, 0.15);
-}
 
-/* Theme variable injection for light mode */
-:host[data-theme="light"] {
-  --color-background-header: rgba(255, 255, 255, 0.95);
-  --color-bg-hover: rgba(79, 70, 229, 0.08);
-  --color-bg-social: rgba(245, 243, 255, 0.6);
-  --color-icon-social: var(--color-primary);
-  --color-background-elevated: #ffffff;
-  --shadow-social: 0 8px 20px rgba(79, 70, 229, 0.15);
-}

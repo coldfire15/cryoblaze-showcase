@@ -58,10 +58,8 @@ export class ThemeService {
   private setupSystemPreferenceListener(): void {
     // Listen for system preference changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-      // Only update if user hasn't manually set a preference
-      if (!localStorage.getItem('theme')) {
         this.themeMode.set(e.matches ? 'dark' : 'light');
-      }
+
     });
   }
 }

@@ -17,6 +17,7 @@
       "title": "Professional Experience",
       "techUsed": "Technologies",
       "cgm": {
+        "duration": "April 2024 to May 2025",
         "title": "Backend Engineer",
         "detail1": "Design, development and maintenance of CGM Studio, a cloud platform dedicated to healthcare professionals in Italy.",
         "detail2": "Backend development within a microservices architecture, ensuring scalability and performance of the application.",
@@ -26,6 +27,7 @@
         "detail6": "Improvement of medical practice management tools: management of patient records, appointment scheduling, and automation of administrative tasks."
       },
       "socgen": {
+        "duration": "July 2021 to April 2024",
         "title": "Full Stack Engineer",
         "detail1": "Development and maintenance of Risk Metric Management, an application for managing users, access rights and workflows related to risk management.",
         "detail2": "Design and implementation of the software architecture using a full-stack approach.",
@@ -33,13 +35,24 @@
         "detail4": "Performance optimization and redesign of key features to improve the user experience and system reliability."
       },
       "capgemini": {
+        "duration": "October 2018 – July 2021",
         "title": "Software Engineer",
         "detail1": "Development and maintenance of a functional administration platform integrated with the Dassault Systèmes PLM 3DExperience solution.",
         "detail2": "Design and implementation of a robust architecture enabling efficient management of business processes related to 3DX.",
         "detail3": "Integration and adaptation of the platform to the specific needs of 3DX to ensure a smooth and efficient experience.",
         "detail4": "Collaboration with business and technical teams to ensure alignment of functionalities with EDF requirements.",
         "detail5": "Continuous improvement of the platform by optimizing performance and ensuring long-term scalability."
+      },
+      "mappa": {
+        "duration": "Since May 2025",
+        "title": "Freelance Software Engineer",
+        "detail1": "Designing, developing, and maintaining a subscription-based application for Mappa Assurance.",
+        "detail2": "Improving development workflows and promoting modern engineering best practices.",
+        "detail3": "Working closely with business and technical teams to ensure feature alignment with operational requirements.",
+        "detail4": "Implementing CI/CD pipelines to streamline deployment and enhance development agility.",
+        "detail5": "Leading code reviews and mentoring junior developers to foster technical growth and maintain code quality."
       }
+
     },
     "skills": {
       "title": "Technical Skills",
