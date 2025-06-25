@@ -11,6 +11,19 @@
   overflow: hidden;
 }
 
+/* Responsive container padding */
+@media (max-width: 768px) {
+  .not-found-container {
+    padding: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-container {
+    padding: var(--space-md);
+  }
+}
+
 .error-card {
   background: rgb(var(--color-card-background));
   border-radius: var(--radius-lg);
@@ -36,7 +49,7 @@
 
 .error-code {
   font-family: var(--font-heading);
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 8vw, 3.5rem);
   margin-bottom: var(--space-sm);
   color: rgb(var(--color-text-primary));
   display: flex;
@@ -55,7 +68,7 @@
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   color: rgb(var(--color-text-primary));
   margin-bottom: var(--space-sm);
   font-weight: 600;
@@ -63,7 +76,7 @@ h1 {
 
 .subtitle {
   color: rgb(var(--color-text-tertiary));
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 3vw, 1.1rem);
 }
 
 .error-content {
@@ -81,6 +94,19 @@ h1 {
   justify-content: center;
   overflow: hidden;
   border: 1px dashed rgba(var(--color-primary-300), 0.5);
+}
+
+/* Responsive interactive area */
+@media (max-width: 768px) {
+  .interactive-area {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .interactive-area {
+    height: 200px;
+  }
 }
 
 .particle-container {
@@ -117,6 +143,14 @@ h1 {
   color: rgb(var(--color-text-primary));
 }
 
+/* Responsive debug console */
+@media (max-width: 480px) {
+  .debug-console {
+    width: 95%;
+    max-width: none;
+  }
+}
+
 .console-header {
   background: rgb(var(--color-background-subtle));
   padding: var(--space-sm) var(--space-md);
@@ -139,14 +173,21 @@ h1 {
 
 .console-title {
   margin-left: var(--space-md);
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
   color: rgb(var(--color-text-tertiary));
 }
 
 .console-body {
   padding: var(--space-md);
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
   line-height: 1.6;
+}
+
+/* Responsive console body */
+@media (max-width: 480px) {
+  .console-body {
+    padding: var(--space-sm);
+  }
 }
 
 .console-body p {
@@ -174,7 +215,7 @@ h1 {
 .message {
   color: rgb(var(--color-text-secondary));
   line-height: 1.6;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 3vw, 1.1rem);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -184,6 +225,15 @@ h1 {
   gap: var(--space-md);
   justify-content: center;
   margin-top: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+/* Responsive action buttons */
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .btn {
@@ -197,7 +247,17 @@ h1 {
   gap: var(--space-sm);
   border: none;
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  min-width: fit-content;
+}
+
+/* Responsive button sizing */
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
 }
 
 .btn i {
@@ -232,14 +292,16 @@ h1 {
   gap: var(--space-sm);
   margin-top: var(--space-2xl);
   color: rgb(var(--color-text-muted));
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .cryoblaze-brand img {
   border-radius: 50%;
 }
 
-/* Dark mode adjustments */
+/* Dark mode adjustments remain the same */
 [data-theme="dark"] .interactive-area {
   background: rgba(var(--color-background-subtle), 0.3);
   border-color: rgba(var(--color-primary-600), 0.3);
@@ -255,24 +317,4 @@ h1 {
 
 [data-theme="dark"] .solution:hover {
   background: rgba(var(--color-primary-900), 0.3);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .error-card {
-    padding: var(--space-xl) var(--space-lg);
-  }
-
-  .interactive-area {
-    height: 200px;
-  }
-
-  .action-buttons {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
 }

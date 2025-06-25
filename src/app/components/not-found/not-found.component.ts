@@ -5,7 +5,7 @@ import confetti from "canvas-confetti"
 
 @Component({
   selector: 'app-not-found',
-  imports: [TranslateModule, RouterLink],
+  imports: [TranslateModule],
   templateUrl: './not-found.component.html',
   styleUrl: './not-found.component.css'
 })

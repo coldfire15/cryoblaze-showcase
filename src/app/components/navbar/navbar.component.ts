@@ -80,7 +80,6 @@ export class NavbarComponent implements OnInit {
   toggleMobile() {
     this.mobileOpen.update(v => !v);
 
-    // Close language menu if open
     if (this.langMenuOpen()) {
       this.langMenuOpen.set(false);
     }
@@ -116,6 +115,10 @@ export class NavbarComponent implements OnInit {
     if (this.langMenuOpen() && !target.closest('.language-switcher')) {
       this.langMenuOpen.set(false);
     }
+  }
+  closeMobileMenu() {
+    this.mobileOpen.set(false);
+    this.langMenuOpen.set(false);
   }
 
   ngOnInit() {
