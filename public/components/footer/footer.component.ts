@@ -16,7 +16,7 @@ export class FooterComponent {
     {
 
       github: 'https://github.com/coldfire15',
-      linkedin: 'https://github.com/coldfire15',
+      linkedin: 'https://linkedin.com/in/ahmed-ammouri',
       twitter: 'https://github.com/coldfire15'
     };
 

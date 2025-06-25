@@ -1,6 +1,8 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component, inject} from '@angular/core';
 import {ContactComponent} from '../contact/contact.component';
 import {TranslateModule} from '@ngx-translate/core';
+import {ActivatedRoute} from '@angular/router';
+import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,20 @@ import {TranslateModule} from '@ngx-translate/core';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit{
+  private route = inject(ActivatedRoute);
+  private viewportScroller = inject(ViewportScroller)
+
+  ngAfterViewInit() {
+    this.route.fragment.subscribe(fragment => {
+      if(fragment) {
+        setTimeout(()=> {
+          this.viewportScroller.scrollToAnchor(fragment)
+        },0);
+      }
+    })
+  }
+
   experiences = [
     {
       title: 'home.experience.mappa.title',

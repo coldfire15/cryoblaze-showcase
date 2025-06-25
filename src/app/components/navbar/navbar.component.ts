@@ -37,7 +37,7 @@ export class NavbarComponent implements OnInit {
       bio: 'Sofware engineer and founder of MarginMaster',
       img: 'images/ahmed-ammouri.jpeg',
       github: 'https://github.com/coldfire15',
-      linkedin: 'https://github.com/coldfire15',
+      linkedin: 'https://linkedin.com/in/ahmed-ammouri',
       twitter: 'https://github.com/coldfire15',
       facebook: 'https://github.com/coldfire15'
     };
@@ -45,8 +45,8 @@ export class NavbarComponent implements OnInit {
 
   readonly navItems: NavItem[] = [
     {label: 'navbar.home', link: '/home'},
-    {label: 'navbar.about', link: '/about'},
-    {label: 'navbar.contact', link: '/contact-message'},
+    // {label: 'navbar.about', link: '/about'},
+    {label: 'navbar.contact', link: '/contact'},
   ];
 
   // signals

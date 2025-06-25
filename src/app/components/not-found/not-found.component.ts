@@ -40,7 +40,7 @@ export class NotFoundComponent implements OnInit {
   }
 
   navigateProjects(): void {
-    this.router.navigate(['/projects']);
+    this.router.navigate(['/'],{fragment:'experience'});
   }
 
   playConfetti(): void {
