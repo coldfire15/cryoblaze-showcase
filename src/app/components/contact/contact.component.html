@@ -6,20 +6,32 @@
         <p translate="contact.description"></p>
       </div>
       <div class="contact-form animate-fade-in delay-100">
-        <form>
+        <form (ngSubmit)="submit()" [formGroup]="contactForm">
           <div class="form-group">
             <label for="name" class="visually-hidden" translate="contact.form.nameLabel"></label>
-            <input type="text" id="name" placeholder="{{ 'contact.form.namePlaceholder' | translate }}" required>
+            <input formControlName="name" type="text" id="name" placeholder="{{ 'contact.form.namePlaceholder' | translate }}" required>
           </div>
           <div class="form-group">
             <label for="email" class="visually-hidden" translate="contact.form.emailLabel"></label>
-            <input type="email" id="email" placeholder="{{ 'contact.form.emailPlaceholder' | translate }}" required>
+            <input formControlName="email" type="email" id="email" placeholder="{{ 'contact.form.emailPlaceholder' | translate }}" required>
           </div>
           <div class="form-group">
             <label for="message" class="visually-hidden" translate="contact.form.messageLabel"></label>
-            <textarea id="message" rows="5" placeholder="{{ 'contact.form.messagePlaceholder' | translate }}" required></textarea>
+            <textarea formControlName="message" id="message" rows="5" placeholder="{{ 'contact.form.messagePlaceholder' | translate }}" required></textarea>
           </div>
-          <button type="submit" class="submit-button" translate="contact.form.submit"></button>
+          <button type="submit" class="submit-button" [disabled]="contactForm.invalid || isSubmitting">
+            @if (isSubmitting) {
+              <span class="spinner"></span>
+              <span translate="contact.form.sending"></span>
+            } @else {
+              <span translate="contact.form.submit"></span>
+            }
+          </button>
+          @if (isSubmitted) {
+            <div class="success-message" translate="contact.form.success"></div>
+          } @else if (isError) {
+            <div class="error-message" translate="contact.form.error"></div>
+          }
         </form>
       </div>
     </div>

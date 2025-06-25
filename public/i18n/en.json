@@ -109,7 +109,11 @@
       "emailPlaceholder": "Your Email",
       "messageLabel": "Message",
       "messagePlaceholder": "Your Message",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Your message has been sent successfully!",
+      "error": "Oops! Something went wrong. Please try again later."
+
     }
   },
   "navbar": {

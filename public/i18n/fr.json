@@ -83,7 +83,10 @@
       "emailPlaceholder": "Votre email",
       "messageLabel": "Message",
       "messagePlaceholder": "Votre message",
-      "submit": "Envoyer le message"
+      "submit": "Envoyer le message",
+      "sending": "Envoi...",
+      "success": "Votre message a été envoyé avec succès !",
+      "error": "Oups ! Une erreur est survenue. Veuillez réessayer plus tard."
     }
   },
   "navbar": {
