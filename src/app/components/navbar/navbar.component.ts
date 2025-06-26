@@ -80,9 +80,15 @@ export class NavbarComponent implements OnInit {
   toggleMobile() {
     this.mobileOpen.update(v => !v);
 
+    // Close language menu if open
     if (this.langMenuOpen()) {
       this.langMenuOpen.set(false);
     }
+  }
+
+  closeMobileMenu() {
+    this.mobileOpen.set(false);
+    this.langMenuOpen.set(false);
   }
 
   toggleLang() {
@@ -106,19 +112,13 @@ export class NavbarComponent implements OnInit {
   onDocumentClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
 
-
-    if (this.mobileOpen() && !target.closest('.mobile-menu-toggle') && !target.closest('.nav-container')) {
+    if (this.mobileOpen() && !target.closest('.mobile-menu-toggle') && !target.closest('.mobile-overlay')) {
       this.mobileOpen.set(false);
     }
-
 
     if (this.langMenuOpen() && !target.closest('.language-switcher')) {
       this.langMenuOpen.set(false);
     }
-  }
-  closeMobileMenu() {
-    this.mobileOpen.set(false);
-    this.langMenuOpen.set(false);
   }
 
   ngOnInit() {
