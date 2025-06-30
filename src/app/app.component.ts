@@ -12,11 +12,21 @@ import {filter, map, mergeMap} from 'rxjs';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
               private titleService:Title,
               private metaService:Meta
   ) {
+    const hasVisited = localStorage.getItem('hasVisited');
+    const isFirstVisit = !hasVisited;
+    const currentUrl= this.router.url;
+    if(isFirstVisit && currentUrl !== '/'){
+      localStorage.setItem('hasVisited','true');
+      this.router.navigateByUrl('/');
+    }
+
+
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
       map(()=>this.activatedRoute),
