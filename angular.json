@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cryoblaze-ui": {
+    "cryoblaze": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/cryoblaze-ui",
+            "outputPath": "dist/cryoblaze",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -38,12 +38,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "10kB",
+                  "maximumError": "15kB"
                 }
               ],
               "outputHashing": "all"
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "cryoblaze-ui:build:production"
+              "buildTarget": "cryoblaze:build:production"
             },
             "development": {
-              "buildTarget": "cryoblaze-ui:build:development"
+              "buildTarget": "cryoblaze:build:development"
             }
           },
           "defaultConfiguration": "development"

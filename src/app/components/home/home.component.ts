@@ -75,8 +75,7 @@ export class HomeComponent implements AfterViewInit{
         'home.experience.capgemini.detail1',
         'home.experience.capgemini.detail2',
         'home.experience.capgemini.detail3',
-        'home.experience.capgemini.detail4',
-        'home.experience.detail5',
+        'home.experience.capgemini.detail4'
       ],
       tech: 'Spring Boot, Angular, Confluence, Jira',
     }

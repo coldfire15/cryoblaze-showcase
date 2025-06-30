@@ -5,20 +5,25 @@ import {NotFoundComponent} from './components/not-found/not-found.component';
 
 export const routes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path:'contact',
-    component: ContactComponent
-  },
-  {
-    path:'',
-    redirectTo: 'home',
+    path: '',
+    component: HomeComponent,
+    title:"CryoBlaze",
     pathMatch: 'full'
   },
   {
+    path:'home',
+    redirectTo: '',
+    pathMatch: 'full'
+  },
+  {
+    path:'contact',
+    title: 'Contact Us - CryoBlaze',
+
+    component: ContactComponent
+  },
+  {
     path:'**',
+    title: 'Page Not Found - CryoBlaze',
     component:NotFoundComponent
   }
 ];
